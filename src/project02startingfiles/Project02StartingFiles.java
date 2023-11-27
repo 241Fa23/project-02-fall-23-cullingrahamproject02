@@ -5,17 +5,16 @@
  */
 package project02startingfiles;
 
-/**
- *
- * @author 
- */
+import java.util.*;
+
 public class Project02StartingFiles {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Welcome to JavaQuest!");
+        System.out.println("Stay alive and increase your score!");
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nChoose your character!");
+        System.out.println("{k} Knight || {h} Healer || {t} Thief || {w} Wizard");
     }
-    
+
 }
