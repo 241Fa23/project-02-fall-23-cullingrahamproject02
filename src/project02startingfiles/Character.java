@@ -18,4 +18,8 @@ public abstract class Character {
 
     public abstract String useSpecialMove();
 
+    @Override
+    public String toString() {
+        return "Health: " + health + "\nScore: " + score + 
+    }
 }
