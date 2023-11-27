@@ -6,4 +6,11 @@ package project02startingfiles;
 
 public class Wizard extends Character {
 
+    int health = 10;
+    String specialmove = "Cast a Spell";
+
+    public Wizard() {
+
+    }
+
 }
