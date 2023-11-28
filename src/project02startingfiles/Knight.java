@@ -17,7 +17,7 @@ public class Knight extends Character {
 
     @Override
     public String useSpecialMove() {
-        return "Slash with Sword";
+        return "The knight slashes their Sword!";
     }
 
     @Override
