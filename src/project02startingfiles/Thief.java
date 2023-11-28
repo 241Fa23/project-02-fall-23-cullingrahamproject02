@@ -6,4 +6,7 @@ package project02startingfiles;
 
 public class Thief extends Character {
 
+    public Thief(int score, int health) {
+        super(score, health);
+    }
 }

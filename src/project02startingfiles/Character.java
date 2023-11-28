@@ -20,6 +20,6 @@ public abstract class Character {
 
     @Override
     public String toString() {
-        return "Health: " + health + "\nScore: " + score + 
+        return "Health: " + health + "\nScore: " + score;
     }
 }

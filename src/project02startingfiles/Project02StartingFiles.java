@@ -17,15 +17,16 @@ public class Project02StartingFiles {
         System.out.println("\nChoose your character!");
         System.out.println("{k} Knight || {h} Healer || {t} Thief || {w} Wizard");
         playerClass = input.next();
-        if (playerClass == k) {
+        if (playerClass.equals("k")) {
             Character ch1 = new Knight();
-        } else if (playerClass == h) {
+        } else if (playerClass.equals("h")) {
             Character ch1 = new Healer();
-        } else if (playerClass == t) {
+        } else if (playerClass.equals("t")) {
             Character ch1 = new Thief();
-        } else if (playerClass == w) {
+        } else if (playerClass.equals("w")) {
             Character ch1 = new Wizard();
         }
+
     }
 
 }

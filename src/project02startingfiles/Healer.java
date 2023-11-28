@@ -6,4 +6,7 @@ package project02startingfiles;
 
 public class Healer extends Character {
 
+    public Healer(int score, int health) {
+        super(score, health);
+    }
 }
