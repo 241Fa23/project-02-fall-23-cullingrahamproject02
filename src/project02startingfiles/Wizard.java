@@ -10,4 +10,20 @@ public class Wizard extends Character {
         super(score, health);
     }
 
+    @Override
+    public String getSpecialMove() {
+        return "Cast a Spell";
+    }
+
+    @Override
+    public String useSpecialMove() {
+        return "The Wizard hurls a fireball!";
+    }
+
+    @Override
+    public String toString() {
+        return "Wizard Status:" + "\nHealth: " + health + "\nScore: " + score
+                + "The Wizards's special move is 'Cast a Spell'" + "\nThanks for Playing!";
+    }
+
 }

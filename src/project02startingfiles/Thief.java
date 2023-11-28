@@ -9,4 +9,20 @@ public class Thief extends Character {
     public Thief(int score, int health) {
         super(score, health);
     }
+
+    @Override
+    public String getSpecialMove() {
+        return "Sneak By";
+    }
+
+    @Override
+    public String useSpecialMove() {
+        return "The Thief Sneaks By!";
+    }
+
+    @Override
+    public String toString() {
+        return "Thief Status:" + "\nHealth: " + health + "\nScore: " + score
+                + "The Thief's special move is 'Sneak By'" + "\nThanks for Playing!";
+    }
 }
