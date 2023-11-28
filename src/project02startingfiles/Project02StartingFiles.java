@@ -30,7 +30,6 @@ public class Project02StartingFiles {
     Scanner scanner = new Scanner(System.in);
     int score = 0;
     boolean continuePlaying = true;
-
     while (continuePlaying
 
     
@@ -41,11 +40,8 @@ public class Project02StartingFiles {
                 "(?)Status Report");
         System.out.println(
                 "{n} {s} {e} {w} || {q}quit");
-
         int choice = scanner.nextInt();
-
         scanner.nextLine(); // Consume newline
-
         switch (choice) {
             case 1:
                 int benign = (int) (Math.random() * 4); // Randomly select benign event
@@ -68,7 +64,6 @@ public class Project02StartingFiles {
                 System.out.println("Player's score increased by 1.");
                 System.out.println(sceneDescription);
                 break;
-
             case 2:
                 int enemy = (int) (Math.random() * 3); // Randomly select enemy
                 String enemyType = "";
@@ -87,10 +82,8 @@ public class Project02StartingFiles {
                 System.out.println("Choose an action:");
                 System.out.println("1. Use special move");
                 System.out.println("2. Run");
-
                 int action = scanner.nextInt();
                 scanner.nextLine(); // Consume newline
-
                 if (action == 2) {
                     System.out.println("You successfully ran away!");
                     score++;
@@ -99,7 +92,6 @@ public class Project02StartingFiles {
                     // Code for special move logic goes here
                 }
                 break;
-
             default:
                 System.out.println("Invalid choice. Please select 1 or 2.");
                 break;
@@ -114,10 +106,7 @@ public class Project02StartingFiles {
                 "yes")) {
             continuePlaying = false;
         }
-
         System.out.println("Game Over. Final score: " + score);
         scanner.close();
-
     }
-
 }
