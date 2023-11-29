@@ -18,6 +18,10 @@ public abstract class Character {
 
     public abstract String useSpecialMove();
 
+    public int decreaseHealth(int health) {
+        return health -= 1;
+    }
+
     @Override
     public String toString() {
         return "Health: " + health + "\nScore: " + score;

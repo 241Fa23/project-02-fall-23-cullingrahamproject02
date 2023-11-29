@@ -11,7 +11,7 @@ public class Project02StartingFiles {
 
     public static void main(String[] args) {
         String playerClass;
-        Character ch1 = null;
+        Character ch1 = new Knight(0, 10);
         System.out.println("Welcome to JavaQuest!");
         System.out.println("Stay alive and increase your score!");
         Scanner input = new Scanner(System.in);
@@ -29,16 +29,17 @@ public class Project02StartingFiles {
         } else {
             System.out.println("Invalid selection, please try again.");
         }
-        System.out.println(ch1.toString());
         int score = 0;
         Scanner scanner = new Scanner(System.in);
-        boolean continuePlaying = true;
+        System.out.println("What would you like to do?");
+        System.out.println("{?} Status Report || {n}{s}{e}{w} Move 1 Space North, South, East, or West || {q} Quit");
+        String choice1 = scanner.next().toLowerCase();
 
-        while (continuePlaying) {
+        while (!choice1.equals("q")) {
             System.out.println("What would you like to do?");
             System.out.println("{?} Status Report || {n}{s}{e}{w} Move 1 Space North, South, East, or West || {q} Quit");
             String choice = scanner.next().toLowerCase();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
             int randomAction = (int) (Math.random() * 2);
             if (choice.equals("?")) {
                 System.out.println(ch1.toString());
@@ -85,14 +86,14 @@ public class Project02StartingFiles {
                         System.out.println("2. Run");
 
                         int action = scanner.nextInt();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
 
                         if (action == 2) {
                             System.out.println("You successfully ran away!");
                             score++;
                         } else {
                             System.out.println("You did not run away in time");
-                            ch1(health -= 1);
+                            ch1.decreaseHealth(1);
 
                             System.out.println("You used your special move!");
                             System.out.println(ch1.useSpecialMove());
@@ -103,16 +104,6 @@ public class Project02StartingFiles {
                         break;
                 }
 
-                System.out.println(
-                        "Current score: " + score);
-                System.out.println(
-                        "Continue playing? (yes/no)");
-                String playAgain = scanner.nextLine();
-
-                if (!playAgain.equalsIgnoreCase(
-                        "yes")) {
-                    continuePlaying = false;
-                }
             }
         }
     }
