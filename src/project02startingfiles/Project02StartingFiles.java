@@ -11,6 +11,7 @@ public class Project02StartingFiles {
 
     public static void main(String[] args) {
         String playerClass;
+        Character ch1 = null;
         System.out.println("Welcome to JavaQuest!");
         System.out.println("Stay alive and increase your score!");
         Scanner input = new Scanner(System.in);
@@ -18,14 +19,17 @@ public class Project02StartingFiles {
         System.out.println("{k} Knight || {h} Healer || {t} Thief || {w} Wizard");
         playerClass = input.next();
         if (playerClass.equals("k")) {
-            Character ch1 = new Knight(0, 10);
+            ch1 = new Knight(0, 10);
         } else if (playerClass.equals("h")) {
-            Character ch1 = new Healer(0, 10);
+            ch1 = new Healer(0, 10);
         } else if (playerClass.equals("t")) {
-            Character ch1 = new Thief(0, 10);
+            ch1 = new Thief(0, 10);
         } else if (playerClass.equals("w")) {
-            Character ch1 = new Wizard(0, 10);
+            ch1 = new Wizard(0, 10);
+        } else {
+            System.out.println("Invalid selection, please try again.");
         }
+        System.out.println(ch1.toString());
         int score = 0;
         Scanner scanner = new Scanner(System.in);
         boolean continuePlaying = true;
@@ -62,7 +66,7 @@ public class Project02StartingFiles {
                         System.out.println(sceneDescription);
                         break;
                     case 1:
-                        int enemy = (int) (Math.random() * 3); // Randomly select enemy
+                        int enemy = (int) (Math.random() * 3);
                         String enemyType = "";
                         switch (enemy) {
                             case 0:
@@ -91,7 +95,7 @@ public class Project02StartingFiles {
                             ch1(health -= 1);
 
                             System.out.println("You used your special move!");
-                            // Code for special move logic goes here
+                            System.out.println(ch1.useSpecialMove());
                         }
                         break;
                     default:
