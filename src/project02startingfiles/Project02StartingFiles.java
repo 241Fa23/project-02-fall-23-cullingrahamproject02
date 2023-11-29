@@ -104,12 +104,8 @@ public class Project02StartingFiles {
                             default:
                                 System.out.println("Invalid selection");
                                 break;
-                        }
-                        break;
 
-                    default:
-                        System.out.println("Invalid choice. Please select 1 or 2.");
-                        break;
+                        }
                 }
 
             }
