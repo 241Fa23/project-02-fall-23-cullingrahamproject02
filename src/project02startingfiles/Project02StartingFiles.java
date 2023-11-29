@@ -87,6 +87,9 @@ public class Project02StartingFiles {
                             System.out.println("You successfully ran away!");
                             score++;
                         } else {
+                            System.out.println("You did not run away in time");
+                            ch1(health -= 1);
+
                             System.out.println("You used your special move!");
                             // Code for special move logic goes here
                         }
@@ -109,3 +112,4 @@ public class Project02StartingFiles {
             }
         }
     }
+}
