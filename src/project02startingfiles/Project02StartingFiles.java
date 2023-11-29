@@ -35,11 +35,13 @@ public class Project02StartingFiles {
             System.out.println("{?} Status Report || {n}{s}{e}{w} Move 1 Space North, South, East, or West || {q} Quit");
             String choice = scanner.next().toLowerCase();
             scanner.nextLine(); // Consume newline
-            int randomAction = (int) (Math.random() * 5);
-            if (choice.equals("n") || choice.equals("s") || choice.equals("e") || choice.equals("w")) {
+            int randomAction = (int) (Math.random() * 2);
+            if (choice.equals("?")) {
+                System.out.println(ch1.toString());
+            } else if (choice.equals("n") || choice.equals("s") || choice.equals("e") || choice.equals("w")) {
                 switch (randomAction) {
                     case 0:
-                        int benign = (int) (Math.random() * 4); // Randomly select benign event
+                        int benign = (int) (Math.random() * 4);
                         String sceneDescription = "";
                         switch (benign) {
                             case 0:
@@ -59,7 +61,7 @@ public class Project02StartingFiles {
                         System.out.println("Player's score increased by 1.");
                         System.out.println(sceneDescription);
                         break;
-                    case 2:
+                    case 1:
                         int enemy = (int) (Math.random() * 3); // Randomly select enemy
                         String enemyType = "";
                         switch (enemy) {
@@ -93,6 +95,7 @@ public class Project02StartingFiles {
                         System.out.println("Invalid choice. Please select 1 or 2.");
                         break;
                 }
+
                 System.out.println(
                         "Current score: " + score);
                 System.out.println(
