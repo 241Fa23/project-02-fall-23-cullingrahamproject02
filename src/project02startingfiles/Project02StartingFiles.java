@@ -114,6 +114,7 @@ public class Project02StartingFiles {
                 System.out.println("The game has come to an end! Your final stats:");
                 System.out.println(ch1.toString());
                 System.out.println("Thanks for playing!");
+                break;
             }
         }
     }
