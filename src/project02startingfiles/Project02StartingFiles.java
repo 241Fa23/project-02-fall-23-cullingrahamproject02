@@ -97,6 +97,7 @@ public class Project02StartingFiles {
 
                             System.out.println("You used your special move!");
                             System.out.println(ch1.useSpecialMove());
+                            score++;
                         }
                         break;
                     default:
