@@ -29,13 +29,9 @@ public class Project02StartingFiles {
         } else {
             System.out.println("Invalid selection, please try again.");
         }
-        int score = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What would you like to do?");
-        System.out.println("{?} Status Report || {n}{s}{e}{w} Move 1 Space North, South, East, or West || {q} Quit");
-        String choice1 = scanner.next().toLowerCase();
 
-        while (!choice1.equals("q")) {
+        while (true) {
             System.out.println("What would you like to do?");
             System.out.println("{?} Status Report || {n}{s}{e}{w} Move 1 Space North, South, East, or West || {q} Quit");
             String choice = scanner.next().toLowerCase();
@@ -62,7 +58,7 @@ public class Project02StartingFiles {
                                 sceneDescription = "Potty break…";
                                 break;
                         }
-                        score++;
+                        ch1.increaseScore(1);
                         System.out.println("Player's score increased by 1.");
                         System.out.println(sceneDescription);
                         break;
@@ -88,17 +84,29 @@ public class Project02StartingFiles {
                         int action = scanner.nextInt();
                         scanner.nextLine();
 
-                        if (action == 2) {
-                            System.out.println("You successfully ran away!");
-                            score++;
-                        } else {
-                            System.out.println("You did not run away in time");
-                            ch1.decreaseHealth(1);
-
-                            System.out.println("You used your special move!");
-                            System.out.println(ch1.useSpecialMove());
+                        switch (action) {
+                            case 2:
+                                int chance = (int) (Math.random() * 2);
+                                if (chance == 1) {
+                                    System.out.println("You successfully ran away!");
+                                    ch1.increaseScore(1);
+                                } else if (chance == 2) {
+                                    System.out.println("You did not run away in time");
+                                    ch1.decreaseHealth(1);
+                                }
+                                break;
+                            case 1:
+                                System.out.println(ch1.useSpecialMove());
+                                System.out.println("You defeated the " + enemyType + "!");
+                                System.out.println("Increase score by 2 points!");
+                                ch1.increaseScore(2);
+                                break;
+                            default:
+                                System.out.println("Invalid selection");
+                                break;
                         }
                         break;
+
                     default:
                         System.out.println("Invalid choice. Please select 1 or 2.");
                         break;

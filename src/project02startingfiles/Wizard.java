@@ -23,7 +23,7 @@ public class Wizard extends Character {
     @Override
     public String toString() {
         return "Wizard Status:" + "\nHealth: " + health + "\nScore: " + score
-                + "The Wizards's special move is 'Cast a Spell'" + "\nThanks for Playing!";
+                + "\nThe Wizards's special move is 'Cast a Spell'";
     }
 
 }

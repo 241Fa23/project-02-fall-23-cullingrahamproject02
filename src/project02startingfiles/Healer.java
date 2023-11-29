@@ -23,6 +23,7 @@ public class Healer extends Character {
     @Override
     public String toString() {
         return "Healer Status:" + "\nHealth: " + health + "\nScore: " + score
-                + "The Healer's special move is 'Use Sleeping Powder'" + "\nThanks for Playing!";
+                + "\nThe Healer's special move is 'Use Sleeping Powder'";
     }
+
 }

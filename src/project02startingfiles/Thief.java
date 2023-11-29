@@ -23,6 +23,7 @@ public class Thief extends Character {
     @Override
     public String toString() {
         return "Thief Status:" + "\nHealth: " + health + "\nScore: " + score
-                + "The Thief's special move is 'Sneak By'" + "\nThanks for Playing!";
+                + "\nThe Thief's special move is 'Sneak By'";
     }
+
 }

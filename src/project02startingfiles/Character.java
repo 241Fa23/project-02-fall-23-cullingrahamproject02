@@ -18,8 +18,12 @@ public abstract class Character {
 
     public abstract String useSpecialMove();
 
-    public int decreaseHealth(int health) {
-        return health -= 1;
+    public void increaseScore(int points) {
+        this.score += points;
+    }
+
+    public void decreaseHealth(int damage) {
+        this.health -= damage;
     }
 
     @Override

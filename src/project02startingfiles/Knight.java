@@ -23,6 +23,7 @@ public class Knight extends Character {
     @Override
     public String toString() {
         return "Knight Status:" + "\nHealth: " + health + "\nScore: " + score
-                + "The Knight's special move is 'Slash with Sword'" + "\nThanks for Playing!";
+                + "\nThe Knight's special move is 'Slash with Sword'";
     }
+
 }
